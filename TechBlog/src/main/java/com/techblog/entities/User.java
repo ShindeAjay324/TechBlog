@@ -8,8 +8,10 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
+	
 	private String gender;
 	private Date reg_date;
+	private String about;
 	
 	
 	public User(String name, String email, String password, String gender, Date reg_date) {
@@ -70,5 +72,10 @@ public class User {
 		this.reg_date = reg_date;
 	}
 	
-	
+	public String getAbout() {
+		return about;
+	}
+	public void setAbout(String about) {
+		this.about = about;
+	}
 }

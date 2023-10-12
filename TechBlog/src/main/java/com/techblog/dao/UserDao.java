@@ -48,15 +48,20 @@ public class UserDao {
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
 				user=new User();
+				int id=rs.getInt(1);
 				String name=rs.getString(2);
 				String email1=rs.getString(3);
 				String password1=rs.getString(4);
 				String gender =rs.getString(5);
 				Date date=rs.getDate(6);
+				String about=rs.getString(7);
+				user.setId(id);
 				user.setName(name);;
 				user.setEmail(email1);
+				user.setGender(gender);
 				user.setPassword(password1);
 				user.setReg_date(date);
+				user.setAbout(about);
 				
 			}
 		} catch (Exception e) {
